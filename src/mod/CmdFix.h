@@ -2,14 +2,14 @@
 
 #include "ll/api/mod/NativeMod.h"
 
-namespace my_plugin {
+namespace cmd_fix {
 
-class MyMod {
+class CmdFix {
 
 public:
-    static MyMod& getInstance();
+    static CmdFix& getInstance();
 
-    MyMod(ll::mod::NativeMod& self) : mSelf(self) {}
+    CmdFix(ll::mod::NativeMod& self) : mSelf(self) {}
 
     [[nodiscard]] ll::mod::NativeMod& getSelf() const { return mSelf; }
 
@@ -30,4 +30,4 @@ private:
     ll::mod::NativeMod& mSelf;
 };
 
-} // namespace my_plugin
+} // namespace cmd_fix
